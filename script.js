@@ -11,30 +11,6 @@ async function sendMsj() {
     return;
   }
 
-  const lowerPrompt = prompt.toLowerCase();
-  const esParaDiscord = lowerPrompt.includes("enviar mensaje a discord");
-
-  if (esParaDiscord) {
-    try {
-      await fetch(discordURL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          content: `📩 Mensaje enviado desde el formulario: ${prompt}`
-        })
-      });
-
-      Swal.fire("¡Envío exitoso!", "Revisa tu Discord", "success");
-      return;
-    } catch (error) {
-      console.error("Error al enviar a Discord:", error);
-      Swal.fire("Error", "No se pudo enviar el mensaje a Discord", "error");
-      return;
-    }
-  }
-
   const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
   const requestBody = {
     contents: [
