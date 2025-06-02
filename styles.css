@@ -1,7 +1,8 @@
    body {
       font-family: Arial, sans-serif;
-background: radial-gradient(circle at center, #ffffff, #fe7acc, #a118a3);
-
+      background-image: url(background.png);
+      background-size: cover;
+      background-repeat: no-repeat;
       margin: 0;
       padding: 2rem;
       display: flex;
@@ -11,22 +12,24 @@ background: radial-gradient(circle at center, #ffffff, #fe7acc, #a118a3);
     }
 
     .contenedor {
-      background: transparent;
+      background: rgba(0, 0, 0, 0.433);
       padding: 2rem;
       border-radius: 1rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       width: 100%;
-      max-width: 600px;
     }
 
     h1 {
       margin-bottom: 1rem;
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: #ffffff;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: bolder;
     }
 
     textarea {
-      width: 100%;
+        width: 90%;
       height: 100px;
       padding: 1rem;
       border-radius: 0.5rem;
@@ -34,22 +37,26 @@ background: radial-gradient(circle at center, #ffffff, #fe7acc, #a118a3);
       resize: none;
       font-size: 1rem;
       background: transparent;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
     }
 
     button {
       margin-top: 1rem;
-      background-color: #480f5b;
+      background: linear-gradient(to left,#903ba7, #42729c);
       color: white;
+      font-weight: bolder;
       padding: 0.7rem 1.5rem;
       font-size: 1rem;
       border: none;
       border-radius: 0.5rem;
       cursor: pointer;
+      margin-right: 4vh;
     }
     h2 {
       margin-top: 2rem;
       font-size: 1.2rem;
-      color: #2f3640;
+      color: white;
     }
 
     #respuestaIA {
@@ -59,4 +66,5 @@ background: radial-gradient(circle at center, #ffffff, #fe7acc, #a118a3);
       border-radius: 0.5rem;
       min-height: 50px;
       white-space: pre-wrap;
+      color: white;
     }
